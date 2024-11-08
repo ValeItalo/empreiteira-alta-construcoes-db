@@ -1,9 +1,9 @@
--- db-config.sql
+CREATE DATABASE IF NOT EXISTS AltaConstrucoes;
+USE AltaConstrucoes;
 
--- Criação da tabela de emails
-CREATE TABLE Emails (
-    id INT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS Emails (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     subject VARCHAR(255) NOT NULL,
     body TEXT NOT NULL,
-    createdAt DATETIME DEFAULT GETDATE()
+    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
 );
